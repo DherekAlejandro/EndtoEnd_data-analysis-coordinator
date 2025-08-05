@@ -82,12 +82,6 @@ if uploaded_file is not None:
                 if response.status_code == 200:
                     st.success('Procesamiento exitoso')
                     data = response.json()
-                    if isinstance(data, dict):
-                        st.table([{k: v} for k, v in data.items()])
-                    elif isinstance(data, list):
-                        st.table(data)
-                    else:
-                        st.write(data)
                 else:
                     st.error(f'Error en el procesamiento: {response.status_code}')
             except Exception as e:

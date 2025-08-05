@@ -10,6 +10,8 @@ todo dato completamente incomprensible debe ser marcado como "ILEGIBLE"
 si ves alguna anomalía en los datos, como una frase que no tiene sentido, debes corregirlo para darle lógica y si definitivamente no es posible, escribirlo y marcarlo entre parentesis marcarlo como "REVISAR".
 
 la fecha es de tipo date, no es opcional
+la identificacion debe ir sin puntos, ni comas, ni espacios, ni guiones, solo números
+la edad es un número entero, no es opcional
 
 Los datos están en español y deben ser procesados para ese idioma.
 """
