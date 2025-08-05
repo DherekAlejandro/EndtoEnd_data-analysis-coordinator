@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 from PIL import Image
 import io
+import os
 
 
 # Nueva paleta de colores moderna y profesional
@@ -62,7 +63,9 @@ st.markdown(f"<h3 style='text-align:center; color:{COLOR_SECUNDARIO}; margin-top
 
 st.markdown(f'''<hr style="border:1px solid {COLOR_PRIMARIO}; margin-bottom:2rem;">''', unsafe_allow_html=True)
 
-uploaded_file = st.file_uploader('Sube una imagen médica', type=['jpg', 'jpeg', 'png', 'bmp', 'tiff'])
+
+# Configura la URL del backend según entorno
+BACKEND_URL = os.getenv('BACKEND_URL', 'https://fastapi-backend-h2xu.onrender.com/')
 
 if uploaded_file is not None:
     st.image(uploaded_file, caption='Imagen cargada', use_column_width=True)
@@ -70,7 +73,7 @@ if uploaded_file is not None:
         with st.spinner('Procesando imagen...'):
             files = {'file': (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)}
             try:
-                response = requests.post('http://localhost:8000/', files=files)
+                response = requests.post(BACKEND_URL, files=files)
                 if response.status_code == 200:
                     st.success('Procesamiento exitoso')
                     st.json(response.json())
