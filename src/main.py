@@ -1,9 +1,9 @@
 from fastapi import FastAPI, File, UploadFile
-from utilies.ia.agente import process_medical_image
-from utilies.ia.schema import MedicalRecord
-from utilies.ia.db import create_db_and_tables, get_session
-from utilies.ia.models import MedicalRecordORM
-from utilies.ia.repository import MedicalRecordRepository
+from src.utilies.ia.agente import process_medical_image
+from src.utilies.ia.schema import MedicalRecord
+from src.utilies.ia.db import create_db_and_tables, get_session
+from src.utilies.ia.models import MedicalRecordORM
+from src.utilies.ia.repository import MedicalRecordRepository
 from dotenv import load_dotenv
 import sys
 
