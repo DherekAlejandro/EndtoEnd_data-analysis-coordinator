@@ -67,6 +67,8 @@ st.markdown(f'''<hr style="border:1px solid {COLOR_PRIMARIO}; margin-bottom:2rem
 # Configura la URL del backend según entorno
 BACKEND_URL = os.getenv('BACKEND_URL', 'https://fastapi-backend-h2xu.onrender.com/')
 
+uploaded_file = st.file_uploader('Sube una imagen médica', type=['jpg', 'jpeg', 'png', 'bmp', 'tiff'])
+
 if uploaded_file is not None:
     st.image(uploaded_file, caption='Imagen cargada', use_column_width=True)
     if st.button('Procesar Imagen', key='procesar'):
