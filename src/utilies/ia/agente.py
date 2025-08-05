@@ -1,7 +1,7 @@
 from typing import Optional
 import google.generativeai as genai
-from utilies.ia.schema import MedicalRecord
-from utilies.ia.config import GENERATION_CONFIGS, SYSTEM
+from src.utilies.ia.schema import MedicalRecord
+from src.utilies.ia.config import GENERATION_CONFIGS, SYSTEM
 from pydantic import ValidationError
 
 def process_medical_image(image_data: str) -> Optional[MedicalRecord]:
