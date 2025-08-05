@@ -56,11 +56,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 
-st.markdown(f"""
-    <div style='display: flex; justify-content: center;'>
-        <img src='{LOGO_URL}' width='220'/>
-    </div>
-""", unsafe_allow_html=True)
+st.image(LOGO_URL, width=220)
 st.markdown(f"<h1 style='text-align:center; color:{COLOR_PRIMARIO}; margin-bottom:0;'>IPS Salud Ocupacional de los Andes</h1>", unsafe_allow_html=True)
 st.markdown(f"<h3 style='text-align:center; color:{COLOR_SECUNDARIO}; margin-top:0;'>Procesamiento de Imágenes Médicas</h3>", unsafe_allow_html=True)
 
@@ -81,7 +77,7 @@ if uploaded_file is not None:
                 response = requests.post(BACKEND_URL, files=files)
                 if response.status_code == 200:
                     st.success('Procesamiento exitoso')
-                    data = response.json()
+                    st.json(response.json())
                 else:
                     st.error(f'Error en el procesamiento: {response.status_code}')
             except Exception as e:
