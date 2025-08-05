@@ -21,8 +21,11 @@ async def upload_file(file: UploadFile = File(...)):
     try:
         content = await file.read()
         print(f"[DEBUG] Archivo recibido: {file.filename}, tamaño: {len(content)} bytes", file=sys.stderr)
+        # Convertir a base64 para evitar errores de decodificación
+        import base64
+        content_b64 = base64.b64encode(content).decode("utf-8")
         # Procesar la imagen y obtener el MedicalRecord (Pydantic)
-        record = process_medical_image(content)
+        record = process_medical_image(content_b64)
         print(f"[DEBUG] Resultado de process_medical_image: {record}", file=sys.stderr)
         if record is None:
             return {"error": "No se pudo procesar el archivo o el esquema es inválido", "debug": "El resultado de process_medical_image fue None. Revisa los logs del backend para más detalles."}
