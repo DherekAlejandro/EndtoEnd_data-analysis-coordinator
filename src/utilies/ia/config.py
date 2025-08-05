@@ -7,7 +7,7 @@ considera que algunos imc se escribieron en fracción pasalo tal cual al campo s
 
 todo dato completamente incomprensible debe ser marcado como "ILEGIBLE"
 
-si ves alguna anomalía en los datos, como una frase que no tiene sentido o un dato que no parece correcto, debes escribirlo y entre parentesis marcarlo como "REVISAR" o corregirlo si es posible.
+si ves alguna anomalía en los datos, como una frase que no tiene sentido, debes corregirlo para darle lógica y si definitivamente no es posible, escribirlo y marcarlo entre parentesis marcarlo como "REVISAR".
 
 la fecha es de tipo date, no es opcional
 
