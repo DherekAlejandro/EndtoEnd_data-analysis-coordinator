@@ -13,13 +13,6 @@ Por defecto, la aplicación está configurada para usar PostgreSQL, ideal para d
 3. Instala las dependencias:
     pip install -r requirements.txt
 
-## Despliegue en Render
-
-Render provee la variable de entorno `DATABASE_URL` automáticamente. No necesitas cambiar nada en el código.
-
-## Migración desde SQLite
-
-Si tienes datos en SQLite y necesitas migrarlos, puedes usar herramientas como `pgloader` o scripts personalizados.
 =======
 # pruebapractica
 >>>>>>> a3a089cf213f3d2c7378a4c52e671db07dbfca74
