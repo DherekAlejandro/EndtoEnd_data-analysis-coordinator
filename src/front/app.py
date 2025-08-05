@@ -13,8 +13,7 @@ COLOR_FONDO = '#F5F7FA'      # Fondo gris muy claro
 COLOR_TEXTO = '#212121'      # Gris oscuro para texto
 
 # Logo de la empresa (puedes reemplazar la URL por la ruta local si tienes el archivo)
-LOGO_URL = 'https://ipsandes.com.co/wp-content/uploads/2022/09/logo-ips-salud-ocupacional-de-los-andes.png'
-
+LOGO_URL = 'https://soandes.com.co/wp-content/themes/soandes/images/logo-soandes.svg'
 
 st.set_page_config(page_title='IPS Salud Ocupacional de los Andes', page_icon=LOGO_URL, layout='centered')
 
