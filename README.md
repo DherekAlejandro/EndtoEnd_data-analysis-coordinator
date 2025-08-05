@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Base de datos
 
 Por defecto, la aplicación está configurada para usar PostgreSQL, ideal para despliegue en Render.
@@ -19,3 +20,6 @@ Render provee la variable de entorno `DATABASE_URL` automáticamente. No necesit
 ## Migración desde SQLite
 
 Si tienes datos en SQLite y necesitas migrarlos, puedes usar herramientas como `pgloader` o scripts personalizados.
+=======
+# pruebapractica
+>>>>>>> a3a089cf213f3d2c7378a4c52e671db07dbfca74
